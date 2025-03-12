@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Sensation - Homepage</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/images/logo.png" alt="Taste Sensation Logo">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/howitworks">How It Works</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="/images/video-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </section>
+    
+    
+
+    <h1>Taste Sensation</h1>
+    
+    <h2>"Your One-Stop Solution for Launching and Growing Your Food Business"</h2> 
+    <h3>"Helping food entrepreneurs to Simplify Funding, Licensing, and Compliance"</h3> 
+    
+    <div class="card">  
+          
+        <div class="content2">
+            <h1>Taste Sensation</h1>
+            <h3>Your Food Business Journey Starts Here – Funding, Licensing, and Compliance Made Easy</h3>
+            
+        </div>  
+        <button class="join-button"><a href="/register" class="btn2">Get Started</a>.</button>
+          
+    </div> 
+    <h1>Our Services</h1>
+    <section class="services">
+        <div class="service-box">
+            <h3>Funding Support</h3>
+            <p>We provide funding to food entrepreneurs to kickstart their businesses.</p>
+            <a href="/services" class="btn">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Legal Assistance</h3>
+            <p>We help with all legal documentation and licensing needs.</p>
+            <a href="/services" class="btn">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Complaints</h3>
+            <p>Submit your complaints and we will resolve them for you.</p>
+            <a href="/services" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: 123-456-7890</p>
+            <p>Email: contact@tastesensation.com</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("mobile-menu");
+        const navLinks = document.querySelector(".nav-links");
+    
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    });
+
+    
+    </script>
+    
+    
+</body>
+</html>

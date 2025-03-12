@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Sensation - Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/images/logo.png" alt="Taste Sensation Logo">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/howitworks">How It Works</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Register for Taste Sensation Assistance</h1>
+
+    <form action="/register" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone"><br>
+
+        <label for="assistance_type">Select Assistance Type:</label>
+        <select name="assistance_type">
+            <option value="Funding">Funding</option>
+            <option value="Legal Help">Legal Help</option>
+            <option value="Complaints">Complaints</option>
+        </select><br>
+
+        <input type="submit" value="Register">
+    </form>
+    
+    
+
+</body>
+</html>

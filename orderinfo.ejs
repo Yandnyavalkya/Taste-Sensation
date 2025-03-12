@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Information</title>
+</head>
+<body>
+    <h1>ORDERS INFORMATION</h1>
+    <table border="1" width="100%">
+        <tr>
+            <th>Customer Name</th>
+            <th>Table Number</th>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        <% if (orders.length > 0) { %>
+            <% for (var i = 0; i < orders.length; i++) { %>
+                <tr>
+                    <td><%- orders[i].customerName %></td>
+                    <td><%- orders[i].tableNumber %></td>
+                    <td><%- orders[i].item %></td>
+                    <td><%- orders[i].quantity %></td>
+                </tr>
+            <% } %>
+        <% } else { %>
+            <tr><td colspan="4">No orders found.</td></tr>
+        <% } %>
+    </table>
+</body>
+</html>
+<style>
+    /* Your CSS styles for orderinfo.ejs */
+</style>
