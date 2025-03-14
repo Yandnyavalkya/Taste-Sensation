@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste Sensation - How It Works</title>
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Pathway container */
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto;
+            width: 80%;
+            position: relative;
+        }
+
+        /* Connecting path */
+        .steps-container::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            background: #FF9800;
+            top: 10px;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Step boxes */
+        .step-box {
+            width: 250px;
+            background: white;
+            border: 2px solid #FF9800;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+            margin: 20px 0;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* Circle markers */
+        .step-box::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #FF9800;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -15px;
+        }
+
+        /* Alternating step alignment */
+        .step:nth-child(even) .step-box {
+            align-self: flex-end;
+        }
+
+        .step:nth-child(odd) .step-box {
+            align-self: flex-start;
+        }
+
+        /* Hover animation */
+        .step-box:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .step-box {
+                width: 200px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,19 +101,22 @@
         </nav>
     </header>
 
-    <h1>How Taste Sensation Works</h1>
+    <h1 style="text-align: center; color: #FF9800;">How Taste Sensation Works</h1>
 
-    <section class="services">
-        <div class="service-box2">
-            <ol>
-                <li><strong>Step 1:</strong> Register on our platform with your business details.</li><br />
-                <li><strong>Step 2:</strong> Choose the type of assistance you need - funding, legal support, or complaints.</li><br />
-                <li><strong>Step 3:</strong> Our team will review your application and guide you through the process.</li><br />
-                <li><strong>Step 4:</strong> Receive funding, legal help, or have your complaint resolved.</li>
-            </ol>
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-box">Step 1: Register on our platform with your business details.</div>
         </div>
-    </section>
-    
+        <div class="step">
+            <div class="step-box">Step 2: Choose the assistance you need - funding, legal, or complaints.</div>
+        </div>
+        <div class="step">
+            <div class="step-box">Step 3: Our team reviews your application and guides you.</div>
+        </div>
+        <div class="step">
+            <div class="step-box">Step 4: Receive funding, legal help, or complaint resolution.</div>
+        </div>
+    </div>
     
 </body>
 </html>

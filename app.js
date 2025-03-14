@@ -27,7 +27,7 @@ app.get('/howitworks', (req, res) => {
 
 // Registration page
 app.get('/register', (req, res) => {
-    res.render('register');
+    res.render('register', { message: null });  // Ensure message is passed
 });
 
 // Contact page
@@ -39,19 +39,22 @@ app.get('/contact', (req, res) => {
 app.post('/register', (req, res) => {
     const { name, email, phone, assistance_type } = req.body;
     
+    console.log("Form Data Received:", req.body); // Debugging to check data
+
     const sql = "INSERT INTO users (name, email, phone, assistance_type) VALUES (?, ?, ?, ?)";
-    
+
     con.query(sql, [name, email, phone, assistance_type], (error, result) => {
-        if (error) throw error;
-        // Pass confirmation message to the view
-        res.render('register', { message: "Our executive will contact you within 24 hours." });
+        if (error) {
+            console.error("Database Insertion Error:", error);
+            return res.render('register', { message: "Error occurred while registering. Please try again." });
+        }
+
+        console.log("Data Inserted Successfully");
+        res.render('register', { message: "Our representative will contact you within 24 hours." });
     });
 });
-
 
 // Start server
 app.listen(5500, () => {
     console.log('Server started on http://localhost:5500');
 });
-
-
